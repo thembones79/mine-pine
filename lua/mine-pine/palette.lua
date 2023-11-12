@@ -5,7 +5,7 @@ local variants = {
 		---@deprecated for backwards compatibility
 		_experimental_nc = '#000000',
 		nc = '#000000',
-		base = '#000000',
+		base = '#010101',
 		surface = '#151114',
 		overlay = '#1b161a',
 		muted = '#524841',
