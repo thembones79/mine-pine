@@ -4,7 +4,7 @@ local variants = {
 	main = {
 		---@deprecated for backwards compatibility
 		_experimental_nc = '#0e0b0d',
-		nc = '#0e0b0d',
+		nc = '#010101',
 		base = '#110d0f',
 		surface = '#151114',
 		overlay = '#1b161a',
