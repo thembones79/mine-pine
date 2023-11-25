@@ -3,9 +3,9 @@ local options = require('mine-pine.config').options
 local variants = {
 	main = {
 		---@deprecated for backwards compatibility
-		_experimental_nc = '#000000',
-		nc = '#000000',
-		base = '#010101',
+		_experimental_nc = '#000002',
+		nc = '#000001',
+		base = '#090600',
 		surface = '#151114',
 		overlay = '#1b161a',
 		muted = '#524841',
