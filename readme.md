@@ -3,7 +3,7 @@
     <h2 align="center">Mine Pine for Neovim</h2>
 </p>
 
-<p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
+<p align="center">Based on [rose-pine](https://github.com/rose-pine/neovim) but warmer, more cozy, relaxing and easier on eyes :)</p>
 
 ## Install
 
@@ -35,15 +35,15 @@ end)
 
 **Mine Pine**
 
-![Mine Pine with Neovim](https://user-images.githubusercontent.com/1973/163921570-0f577baf-3199-4f09-9779-a7eb9238151a.png)
+![Mine Pine with Neovim](mine-pine-main.png)
 
 **Mine Pine Moon**
 
-![Mine Pine Moon with Neovim](https://user-images.githubusercontent.com/1973/163921620-d3acd0d2-d227-4d28-a5e8-97ff22e56c6d.png)
+![Mine Pine Moon with Neovim](mine-pine-moon.png)
 
 **Mine Pine Dawn**
 
-![Mine Pine Dawn with Neovim](https://user-images.githubusercontent.com/1973/163921656-644a2db3-c55c-4e89-9bdd-39cdd7a2681b.png)
+![Mine Pine Dawn with Neovim](mine-pine-dawn.png)
 
 ## Options
 
