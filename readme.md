@@ -1,9 +1,4 @@
-<p align="center">
-    <img src="https://github.com/mine-pine/mine-pine-theme/raw/main/assets/icon.png" width="80" />
-    <h2 align="center">Mine Pine for Neovim</h2>
-</p>
-
-<p align="center">Based on [rose-pine](https://github.com/rose-pine/neovim) but warmer, more cozy, relaxing and easier on eyes :)</p>
+Based on **[rose-pine](https://github.com/rose-pine/neovim)** but warmer, more cozy, relaxing and easier on eyes :)
 
 ## Install
 
@@ -110,10 +105,6 @@ require('mine-pine').setup({
 -- Set colorscheme after options
 vim.cmd('colorscheme mine-pine')
 ```
-
-## Contributing
-
-We welcome and appreciate any help in creating a lovely experience for all.
 
 - Get highlight groups under cursor via `:Inspect` in Neovim 0.9 or [nvim-treesitter/playground](https://github.com/nvim-treesitter/playground#show-treesitter-and-syntax-highlight-groups-under-the-cursor)
 - [Adding new highlight groups](https://github.com/mine-pine/neovim/issues/6#issuecomment-962466323)
