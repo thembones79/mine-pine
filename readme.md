@@ -1,4 +1,4 @@
-Based on **[rose-pine](https://github.com/rose-pine/neovim)** but warmer, more cozy, relaxing and easier on eyes :)
+Neovim color scheme - based on **[rose-pine](https://github.com/rose-pine/neovim)** but warmer, more cozy, relaxing and easier on eyes :)
 
 ## Install
 
