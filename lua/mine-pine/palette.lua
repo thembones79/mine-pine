@@ -86,9 +86,17 @@ local variants = {
 	},
 }
 
+if options.palette ~= nil and next(options.palette) then
+	-- handle variant specific overrides
+	for variant_name, override_palette in pairs(options.palette) do
+		if variants[variant_name] then
+			variants[variant_name] = vim.tbl_extend("force", variants[variant_name], override_palette or {})
+		end
+	end
+end
+
 if variants[options.variant] ~= nil then
 	return variants[options.variant]
 end
 
-return vim.o.background == 'light' and variants.dawn
-	or variants[options.dark_variant or 'main']
+return vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "main"]
