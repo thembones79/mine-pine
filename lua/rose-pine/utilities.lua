@@ -23,7 +23,7 @@ function utilities.parse_color(color)
 	color = color:lower()
 
 	if not color:find("#") and color ~= "NONE" then
-		color = require("mine-pine.palette")[color] or vim.api.nvim_get_color_by_name(color)
+		color = require("rose-pine.palette")[color] or vim.api.nvim_get_color_by_name(color)
 	end
 
 	return color
