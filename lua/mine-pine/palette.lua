@@ -2,9 +2,7 @@ local options = require('mine-pine.config').options
 
 local variants = {
 	main = {
-		---@deprecated for backwards compatibility
-		_experimental_nc = '#000001',
-		nc = '#000002',
+		_nc = '#000002',
 		base = '#1d2021',
 		surface = '#151114',
 		overlay = '#1b161a',
@@ -17,15 +15,15 @@ local variants = {
 		pine = '#426749',
 		foam = '#75906b',
 		iris = '#937372',
+		leaf = "#95b1ac",
 		highlight_low = '#161414',
 		highlight_med = '#ffd3c5',
 		highlight_high = '#3c3531',
 		none = 'NONE',
 	},
 	moon = {
-		---@deprecated for backwards compatibility
-		_experimental_nc = '#000002',
-		nc = '#000001',
+
+		_nc = '#000001',
 		base = '#232324',
 		surface = '#151114',
 		overlay = '#1b161a',
@@ -38,15 +36,14 @@ local variants = {
 		pine = '#426749',
 		foam = '#75906b',
 		iris = '#937372',
+		leaf = "#95b1ac",
 		highlight_low = '#161414',
 		highlight_med = '#ccbaaa',
 		highlight_high = '#3c3531',
 		none = 'NONE',
 	},
 	dawn = {
-		---@deprecated for backwards compatibility
-		_experimental_nc = '#000001',
-		nc = '#000002',
+		_nc = '#000002',
 		base = '#010101',
 		surface = '#151114',
 		overlay = '#1b161a',
@@ -59,6 +56,7 @@ local variants = {
 		pine = '#426749',
 		foam = '#75906b',
 		iris = '#937372',
+		leaf = "#95b1ac",
 		highlight_low = '#161414',
 		highlight_med = '#ffd3c5',
 		highlight_high = '#3c3531',
@@ -86,17 +84,9 @@ local variants = {
 	},
 }
 
-if options.palette ~= nil and next(options.palette) then
-	-- handle variant specific overrides
-	for variant_name, override_palette in pairs(options.palette) do
-		if variants[variant_name] then
-			variants[variant_name] = vim.tbl_extend("force", variants[variant_name], override_palette or {})
-		end
-	end
-end
-
 if variants[options.variant] ~= nil then
 	return variants[options.variant]
 end
 
-return vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "main"]
+return vim.o.background == 'light' and variants.dawn
+	or variants[options.dark_variant or 'main']
