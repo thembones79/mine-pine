@@ -2,9 +2,9 @@
 --- https://github.com/NTBBloodbath/galaxyline.nvim
 ---
 --- @usage
---- local highlights = require('mine-pine.plugins.galaxyline')
+--- local highlights = require("mine-pine.plugins.galaxyline")
 
-local p = require('mine-pine.palette')
+local p = require("mine-pine.palette")
 
 return {
 	bg = p.surface,
