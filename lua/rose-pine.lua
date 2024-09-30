@@ -1,9 +1,9 @@
 local M = {}
-local config = require("mine-pine.config")
+local config = require("rose-pine.config")
 
 local function set_highlights()
-	local utilities = require("mine-pine.utilities")
-	local palette = require("mine-pine.palette")
+	local utilities = require("rose-pine.utilities")
+	local palette = require("rose-pine.palette")
 	local styles = config.options.styles
 
 	local groups = {}
@@ -1094,12 +1094,12 @@ local function set_highlights()
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
 		vim.cmd([[
-		augroup mine-pine
+		augroup rose-pine
 			autocmd!
 			autocmd TermOpen * if &buftype=='terminal'
 				\|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
 				\|else|setlocal winhighlight=|endif
-			autocmd ColorSchemePre * autocmd! mine-pine
+			autocmd ColorSchemePre * autocmd! rose-pine
 		augroup END
 		]])
 	end
@@ -1114,7 +1114,7 @@ function M.colorscheme(variant)
 		vim.cmd("hi clear")
 		vim.cmd("syntax reset")
 	end
-	vim.g.colors_name = "mine-pine"
+	vim.g.colors_name = "rose-pine"
 
 	set_highlights()
 end

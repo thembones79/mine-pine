@@ -2,10 +2,10 @@
 --- https://github.com/akinsho/bufferline.nvim
 ---
 --- @usage
---- local highlights = require("mine-pine.plugins.bufferline")
+--- local highlights = require("rose-pine.plugins.bufferline")
 --- require("bufferline").setup({ highlights = highlights })
 
-local p = require("mine-pine.palette")
+local p = require("rose-pine.palette")
 
 return {
 	-- fill = {
