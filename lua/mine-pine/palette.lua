@@ -64,9 +64,9 @@ local variants = {
 	},
 	tmux = {
 		_nc = "#16141f",
-		base = "#151515",
-		surface = "#1f1d2e",
-		overlay = "#26233a",
+		base = '#232324',
+		surface = '#151114',
+		overlay = '#1b161a',
 		muted = "#6e6a86",
 		subtle = "#908caa",
 		text = "#e0def4",
