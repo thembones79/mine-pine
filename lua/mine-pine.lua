@@ -53,7 +53,7 @@ local function set_highlights()
 		["@text.math"] = { link = "Special" },
 		["@text.note"] = { link = "SpecialComment" },
 		["@text.strike"] = { strikethrough = true },
-		["@text.strong"] = { bold = styles.bold },
+		["@text.strong"] = { bold = false },
 		["@text.title"] = { link = "Title" },
 		["@text.title.1.markdown"] = { link = "markdownH1" },
 		["@text.title.1.marker.markdown"] = { link = "markdownH1Delimiter" },
@@ -85,7 +85,7 @@ local function set_highlights()
 		CursorColumn = { bg = palette.overlay },
 		-- CursorIM = {},
 		CursorLine = { bg = palette.overlay },
-		CursorLineNr = { fg = palette.text, bold = styles.bold },
+		CursorLineNr = { fg = palette.text },
 		-- DarkenedPanel = { },
 		-- DarkenedStatusline = {},
 		DiffAdd = { bg = groups.git_add, blend = 20 },
@@ -95,11 +95,11 @@ local function set_highlights()
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
-		Directory = { fg = palette.foam, bold = styles.bold },
+		Directory = { fg = palette.foam },
 		-- EndOfBuffer = {},
-		ErrorMsg = { fg = groups.error, bold = styles.bold },
+		ErrorMsg = { fg = groups.error },
 		FloatBorder = make_border(),
-		FloatTitle = { fg = palette.foam, bg = groups.panel, bold = styles.bold },
+		FloatTitle = { fg = palette.foam, bg = groups.panel },
 		FoldColumn = { fg = palette.muted },
 		Folded = { fg = palette.text, bg = groups.panel },
 		IncSearch = { link = "CurSearch" },
@@ -140,12 +140,12 @@ local function set_highlights()
 		Substitute = { link = "IncSearch" },
 		TabLine = { fg = palette.subtle, bg = groups.panel },
 		TabLineFill = { bg = groups.panel },
-		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
-		Title = { fg = palette.foam, bold = styles.bold },
+		TabLineSel = { fg = palette.text, bg = palette.overlay },
+		Title = { fg = palette.foam },
 		VertSplit = { fg = groups.border },
 		Visual = { bg = palette.highlight_med },
 		-- VisualNOS = {},
-		WarningMsg = { fg = groups.warn, bold = styles.bold },
+		WarningMsg = { fg = groups.warn },
 		-- Whitespace = {},
 		WildMenu = { link = "IncSearch" },
 		WinBar = { fg = palette.subtle, bg = groups.panel },
@@ -214,7 +214,7 @@ local function set_highlights()
 		Special = { fg = palette.foam },
 		SpecialChar = { link = "Special" },
 		SpecialComment = { fg = palette.iris },
-		Statement = { fg = palette.pine, bold = styles.bold },
+		Statement = { fg = palette.pine },
 		StorageClass = { fg = palette.foam },
 		String = { fg = palette.gold },
 		Structure = { fg = palette.foam },
@@ -229,7 +229,7 @@ local function set_highlights()
 		healthWarning = { fg = groups.warn },
 
 		htmlArg = { fg = palette.iris },
-		htmlBold = { bold = styles.bold },
+		htmlBold = { bold = false },
 		htmlEndTag = { fg = palette.subtle },
 		htmlH1 = { link = "markdownH1" },
 		htmlH2 = { link = "markdownH2" },
@@ -243,17 +243,17 @@ local function set_highlights()
 		htmlTagName = { fg = palette.foam },
 
 		markdownDelimiter = { fg = palette.subtle },
-		markdownH1 = { fg = groups.h1, bold = styles.bold },
+		markdownH1 = { fg = groups.h1 },
 		markdownH1Delimiter = { link = "markdownH1" },
-		markdownH2 = { fg = groups.h2, bold = styles.bold },
+		markdownH2 = { fg = groups.h2 },
 		markdownH2Delimiter = { link = "markdownH2" },
-		markdownH3 = { fg = groups.h3, bold = styles.bold },
+		markdownH3 = { fg = groups.h3 },
 		markdownH3Delimiter = { link = "markdownH3" },
-		markdownH4 = { fg = groups.h4, bold = styles.bold },
+		markdownH4 = { fg = groups.h4 },
 		markdownH4Delimiter = { link = "markdownH4" },
-		markdownH5 = { fg = groups.h5, bold = styles.bold },
+		markdownH5 = { fg = groups.h5 },
 		markdownH5Delimiter = { link = "markdownH5" },
-		markdownH6 = { fg = groups.h6, bold = styles.bold },
+		markdownH6 = { fg = groups.h6 },
 		markdownH6Delimiter = { link = "markdownH6" },
 		markdownLinkText = { link = "markdownUrl" },
 		markdownUrl = { fg = groups.link, sp = groups.link, underline = true },
@@ -273,16 +273,16 @@ local function set_highlights()
 
 		--- Identifiers
 		["@variable"] = { fg = palette.text, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
+		["@variable.builtin"] = { fg = palette.love },
 		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
 		["@variable.member"] = { fg = palette.foam },
 
 		["@constant"] = { fg = palette.gold },
-		["@constant.builtin"] = { fg = palette.gold, bold = styles.bold },
+		["@constant.builtin"] = { fg = palette.gold },
 		["@constant.macro"] = { fg = palette.gold },
 
 		["@module"] = { fg = palette.text },
-		["@module.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@module.builtin"] = { fg = palette.text },
 		["@label"] = { link = "Label" },
 
 		--- Literals
@@ -305,7 +305,7 @@ local function set_highlights()
 
 		--- Types
 		["@type"] = { fg = palette.foam },
-		["@type.builtin"] = { fg = palette.foam, bold = styles.bold },
+		["@type.builtin"] = { fg = palette.foam },
 		-- ["@type.definition"] = {},
 		-- ["@type.qualifier"] = {},
 
@@ -314,7 +314,7 @@ local function set_highlights()
 
 		--- Functions
 		["@function"] = { fg = palette.rose },
-		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
+		["@function.builtin"] = { fg = palette.rose },
 		-- ["@function.call"] = {},
 		["@function.macro"] = { link = "Function" },
 		["@function.method"] = { fg = palette.rose },
@@ -356,12 +356,12 @@ local function set_highlights()
 		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 20 },
 
 		--- Markup
-		["@markup.strong"] = { bold = styles.bold },
+		["@markup.strong"] = { bold = false },
 		["@markup.italic"] = { italic = styles.italic },
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
 
-		["@markup.heading"] = { fg = palette.foam, bold = styles.bold },
+		["@markup.heading"] = { fg = palette.foam },
 
 		["@markup.quote"] = { fg = palette.text },
 		["@markup.math"] = { link = "Special" },
@@ -486,7 +486,7 @@ local function set_highlights()
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeOpenedFile = { fg = palette.text, bg = palette.overlay },
 		NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
-		NvimTreeRootFolder = { fg = palette.foam, bold = styles.bold },
+		NvimTreeRootFolder = { fg = palette.foam },
 		NvimTreeSpecialFile = { link = "NvimTreeNormal" },
 		NvimTreeWindowPicker = { link = "StatusLineTerm" },
 
@@ -499,7 +499,7 @@ local function set_highlights()
 		NeotestFile = { fg = palette.text },
 		NeotestFocused = { fg = palette.gold, bg = palette.highlight_med },
 		NeotestIndent = { fg = palette.highlight_med },
-		NeotestMarked = { fg = palette.rose, bold = styles.bold },
+		NeotestMarked = { fg = palette.rose },
 		NeotestNamespace = { fg = palette.gold },
 		NeotestPassed = { fg = palette.pine },
 		NeotestRunning = { fg = palette.gold },
@@ -556,8 +556,8 @@ local function set_highlights()
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = palette.subtle },
 		CmpItemAbbrDeprecated = { fg = palette.subtle, strikethrough = true },
-		CmpItemAbbrMatch = { fg = palette.text, bold = styles.bold },
-		CmpItemAbbrMatchFuzzy = { fg = palette.text, bold = styles.bold },
+		CmpItemAbbrMatch = { fg = palette.text },
+		CmpItemAbbrMatchFuzzy = { fg = palette.text },
 		CmpItemKind = { fg = palette.subtle },
 		CmpItemKindClass = { link = "StorageClass" },
 		CmpItemKindFunction = { link = "Function" },
@@ -568,14 +568,14 @@ local function set_highlights()
 
 		-- NeogitOrg/neogit
 		-- https://github.com/NeogitOrg/neogit/blob/master/lua/neogit/lib/hl.lua#L109-L198
-		NeogitChangeAdded = { fg = groups.git_add, bold = styles.bold, italic = styles.italic },
-		NeogitChangeBothModified = { fg = groups.git_change, bold = styles.bold, italic = styles.italic },
-		NeogitChangeCopied = { fg = groups.git_untracked, bold = styles.bold, italic = styles.italic },
-		NeogitChangeDeleted = { fg = groups.git_delete, bold = styles.bold, italic = styles.italic },
-		NeogitChangeModified = { fg = groups.git_change, bold = styles.bold, italic = styles.italic },
-		NeogitChangeNewFile = { fg = groups.git_stage, bold = styles.bold, italic = styles.italic },
-		NeogitChangeRenamed = { fg = groups.git_rename, bold = styles.bold, italic = styles.italic },
-		NeogitChangeUpdated = { fg = groups.git_change, bold = styles.bold, italic = styles.italic },
+		NeogitChangeAdded = { fg = groups.git_add, italic = styles.italic },
+		NeogitChangeBothModified = { fg = groups.git_change, italic = styles.italic },
+		NeogitChangeCopied = { fg = groups.git_untracked, italic = styles.italic },
+		NeogitChangeDeleted = { fg = groups.git_delete, italic = styles.italic },
+		NeogitChangeModified = { fg = groups.git_change, italic = styles.italic },
+		NeogitChangeNewFile = { fg = groups.git_stage, italic = styles.italic },
+		NeogitChangeRenamed = { fg = groups.git_rename, italic = styles.italic },
+		NeogitChangeUpdated = { fg = groups.git_change, italic = styles.italic },
 		NeogitDiffAddHighlight = { link = "DiffAdd" },
 		NeogitDiffContextHighlight = { bg = palette.surface },
 		NeogitDiffDeleteHighlight = { link = "DiffDelete" },
@@ -609,22 +609,22 @@ local function set_highlights()
 		NeorgHeading5Title = { link = "markdownH5" },
 		NeorgHeading6Prefix = { link = "markdownH6Delimiter" },
 		NeorgHeading6Title = { link = "markdownH6" },
-		NeorgMarkerTitle = { fg = palette.foam, bold = styles.bold },
+		NeorgMarkerTitle = { fg = palette.foam },
 
 		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
 		DefinitionCount = { fg = palette.rose },
 		DefinitionIcon = { fg = palette.rose },
-		DefinitionPreviewTitle = { fg = palette.rose, bold = styles.bold },
+		DefinitionPreviewTitle = { fg = palette.rose },
 		LspFloatWinBorder = make_border(),
 		LspFloatWinNormal = { bg = groups.panel },
 		LspSagaAutoPreview = { fg = palette.subtle },
 		LspSagaCodeActionBorder = make_border(palette.rose),
 		LspSagaCodeActionContent = { fg = palette.foam },
-		LspSagaCodeActionTitle = { fg = palette.gold, bold = styles.bold },
+		LspSagaCodeActionTitle = { fg = palette.gold },
 		LspSagaCodeActionTruncateLine = { link = "LspSagaCodeActionBorder" },
 		LspSagaDefPreviewBorder = make_border(),
 		LspSagaDiagnosticBorder = make_border(palette.gold),
-		LspSagaDiagnosticHeader = { fg = palette.foam, bold = styles.bold },
+		LspSagaDiagnosticHeader = { fg = palette.foam },
 		LspSagaDiagnosticTruncateLine = { link = "LspSagaDiagnosticBorder" },
 		LspSagaDocTruncateLine = { link = "LspSagaHoverBorder" },
 		LspSagaFinderSelection = { fg = palette.gold },
@@ -668,7 +668,7 @@ local function set_highlights()
 		TelescopePromptPrefix = { fg = palette.subtle },
 		TelescopeSelection = { fg = palette.text, bg = palette.overlay },
 		TelescopeSelectionCaret = { fg = palette.rose, bg = palette.overlay },
-		TelescopeTitle = { fg = palette.foam, bold = styles.bold },
+		TelescopeTitle = { fg = palette.foam },
 
 		-- ibhagwan/fzf-lua
 		FzfLuaBorder = make_border(),
@@ -699,7 +699,7 @@ local function set_highlights()
 		NotifyWARNTitle = { fg = groups.warn },
 		NotifyBackground = { bg = palette.surface },
 		-- rcarriga/nvim-dap-ui
-		DapUIBreakpointsCurrentLine = { fg = palette.gold, bold = styles.bold },
+		DapUIBreakpointsCurrentLine = { fg = palette.gold },
 		DapUIBreakpointsDisabledLine = { fg = palette.muted },
 		DapUIBreakpointsInfo = { link = "DapUIThread" },
 		DapUIBreakpointsLine = { link = "DapUIBreakpointsPath" },
@@ -708,7 +708,7 @@ local function set_highlights()
 		DapUIFloatBorder = make_border(),
 		DapUIFrameName = { fg = palette.text },
 		DapUILineNumber = { link = "DapUIBreakpointsPath" },
-		DapUIModifiedValue = { fg = palette.foam, bold = styles.bold },
+		DapUIModifiedValue = { fg = palette.foam },
 		DapUIScope = { link = "DapUIBreakpointsPath" },
 		DapUISource = { fg = palette.iris },
 		DapUIStoppedThread = { link = "DapUIBreakpointsPath" },
@@ -774,7 +774,7 @@ local function set_highlights()
 		MiniClueNextKey = { link = "DiagnosticFloatingHint" },
 		MiniClueNextKeyWithPostkeys = { link = "DiagnosticFloatingError" },
 		MiniClueSeparator = { link = "DiagnosticFloatingInfo" },
-		MiniClueTitle = { bg = groups.panel, bold = styles.bold },
+		MiniClueTitle = { bg = groups.panel },
 
 		MiniCompletionActiveParameter = { underline = true },
 
@@ -807,12 +807,12 @@ local function set_highlights()
 		MiniFilesFile = { fg = palette.text },
 		MiniFilesNormal = { link = "NormalFloat" },
 		MiniFilesTitle = { link = "FloatTitle" },
-		MiniFilesTitleFocused = { fg = palette.rose, bg = groups.panel, bold = styles.bold },
+		MiniFilesTitleFocused = { fg = palette.rose, bg = groups.panel },
 
-		MiniHipatternsFixme = { fg = palette.base, bg = groups.error, bold = styles.bold },
-		MiniHipatternsHack = { fg = palette.base, bg = groups.warn, bold = styles.bold },
-		MiniHipatternsNote = { fg = palette.base, bg = groups.info, bold = styles.bold },
-		MiniHipatternsTodo = { fg = palette.base, bg = groups.hint, bold = styles.bold },
+		MiniHipatternsFixme = { fg = palette.base, bg = groups.error },
+		MiniHipatternsHack = { fg = palette.base, bg = groups.warn },
+		MiniHipatternsNote = { fg = palette.base, bg = groups.info },
+		MiniHipatternsTodo = { fg = palette.base, bg = groups.hint },
 
 		MiniIconsAzure = { fg = palette.foam },
 		MiniIconsBlue = { fg = palette.pine },
@@ -830,9 +830,9 @@ local function set_highlights()
 		MiniJump = { sp = palette.gold, undercurl = true },
 
 		MiniJump2dDim = { fg = palette.subtle },
-		MiniJump2dSpot = { fg = palette.gold, bold = styles.bold, nocombine = true },
+		MiniJump2dSpot = { fg = palette.gold, nocombine = true },
 		MiniJump2dSpotAhead = { fg = palette.foam, bg = palette.surface, nocombine = true },
-		MiniJump2dSpotUnique = { fg = palette.rose, bold = styles.bold, nocombine = true },
+		MiniJump2dSpotUnique = { fg = palette.rose, nocombine = true },
 
 		MiniMapNormal = { link = "NormalFloat" },
 		MiniMapSymbolCount = { link = "Special" },
@@ -857,7 +857,7 @@ local function set_highlights()
 		MiniPickNormal = { link = "NormalFloat" },
 		MiniPickPreviewLine = { link = "CursorLine" },
 		MiniPickPreviewRegion = { link = "IncSearch" },
-		MiniPickPrompt = { bg = groups.panel, bold = styles.bold },
+		MiniPickPrompt = { bg = groups.panel },
 
 		MiniStarterCurrent = { nocombine = true },
 		MiniStarterFooter = { fg = palette.subtle },
@@ -873,27 +873,27 @@ local function set_highlights()
 		MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
 		MiniStatuslineFilename = { fg = palette.muted, bg = palette.surface },
 		MiniStatuslineInactive = { link = "MiniStatuslineFilename" },
-		MiniStatuslineModeCommand = { fg = palette.base, bg = palette.love, bold = styles.bold },
-		MiniStatuslineModeInsert = { fg = palette.base, bg = palette.foam, bold = styles.bold },
-		MiniStatuslineModeNormal = { fg = palette.base, bg = palette.rose, bold = styles.bold },
-		MiniStatuslineModeOther = { fg = palette.base, bg = palette.rose, bold = styles.bold },
-		MiniStatuslineModeReplace = { fg = palette.base, bg = palette.pine, bold = styles.bold },
-		MiniStatuslineModeVisual = { fg = palette.base, bg = palette.iris, bold = styles.bold },
+		MiniStatuslineModeCommand = { fg = palette.base, bg = palette.love },
+		MiniStatuslineModeInsert = { fg = palette.base, bg = palette.foam },
+		MiniStatuslineModeNormal = { fg = palette.base, bg = palette.rose },
+		MiniStatuslineModeOther = { fg = palette.base, bg = palette.rose },
+		MiniStatuslineModeReplace = { fg = palette.base, bg = palette.pine },
+		MiniStatuslineModeVisual = { fg = palette.base, bg = palette.iris },
 
 		MiniSurround = { link = "IncSearch" },
 
-		MiniTablineCurrent = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
+		MiniTablineCurrent = { fg = palette.text, bg = palette.overlay },
 		MiniTablineFill = { link = "TabLineFill" },
 		MiniTablineHidden = { fg = palette.subtle, bg = groups.panel },
-		MiniTablineModifiedCurrent = { fg = palette.overlay, bg = palette.text, bold = styles.bold },
+		MiniTablineModifiedCurrent = { fg = palette.overlay, bg = palette.text },
 		MiniTablineModifiedHidden = { fg = groups.panel, bg = palette.subtle },
 		MiniTablineModifiedVisible = { fg = groups.panel, bg = palette.text },
 		MiniTablineTabpagesection = { link = "Search" },
 		MiniTablineVisible = { fg = palette.text, bg = groups.panel },
 
-		MiniTestEmphasis = { bold = styles.bold },
-		MiniTestFail = { fg = palette.love, bold = styles.bold },
-		MiniTestPass = { fg = palette.foam, bold = styles.bold },
+		MiniTestEmphasis = { bold = false },
+		MiniTestFail = { fg = palette.love },
+		MiniTestPass = { fg = palette.foam },
 
 		MiniTrailspace = { bg = palette.love },
 
@@ -976,7 +976,7 @@ local function set_highlights()
 		DiagnosticVirtualTextWarn = { fg = groups.warn },
 
 		FloatBorder = { fg = palette.muted, bg = "NONE" },
-		FloatTitle = { fg = palette.foam, bg = "NONE", bold = styles.bold },
+		FloatTitle = { fg = palette.foam, bg = "NONE" },
 		Folded = { fg = palette.text, bg = "NONE" },
 		NormalFloat = { bg = "NONE" },
 		Normal = { fg = palette.text, bg = "NONE" },
@@ -988,7 +988,7 @@ local function set_highlights()
 		StatusLineNC = { fg = palette.muted, bg = "NONE" },
 		TabLine = { bg = "NONE", fg = palette.subtle },
 		TabLineFill = { bg = "NONE" },
-		TabLineSel = { fg = palette.text, bg = "NONE", bold = styles.bold },
+		TabLineSel = { fg = palette.text, bg = "NONE" },
 
 		-- ["@markup.raw"] = { bg = "none" },
 		["@markup.raw.markdown_inline"] = { fg = palette.gold },
@@ -996,7 +996,7 @@ local function set_highlights()
 
 		TelescopeNormal = { fg = palette.subtle, bg = "NONE" },
 		TelescopePromptNormal = { fg = palette.text, bg = "NONE" },
-		TelescopeSelection = { fg = palette.text, bg = "NONE", bold = styles.bold },
+		TelescopeSelection = { fg = palette.text, bg = "NONE" },
 		TelescopeSelectionCaret = { fg = palette.rose },
 
 		TroubleNormal = { bg = "NONE" },
@@ -1011,9 +1011,9 @@ local function set_highlights()
 		TreesitterContext = { bg = "NONE" },
 		TreesitterContextLineNumber = { fg = palette.rose, bg = "NONE" },
 
-		MiniFilesTitleFocused = { fg = palette.rose, bg = "NONE", bold = styles.bold },
+		MiniFilesTitleFocused = { fg = palette.rose, bg = "NONE" },
 
-		MiniPickPrompt = { bg = "NONE", bold = styles.bold },
+		MiniPickPrompt = { bg = "NONE" },
 		MiniPickBorderText = { bg = "NONE" },
 	}
 
